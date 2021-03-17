@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BANKING</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+    integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,200;0,300;0,400;0,900;1,700&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Piazzolla", serif;
+    }
+
+    :root {
+      --main-bg: #1e272e;
+      --main-color: #0097e6;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main_menu {
+      background-color: var(--main-bg);
+      z-index: 3;
+      position: sticky;
+    }
+
+    .navbar {
+      color: #fff;
+      background-color: var(--main-bg);
+      padding: 2rem 0;
+    }
+
+    .navbar li a {
+      margin: 0 2rem;
+      font-weight: bold;
+    }
+
+    .navbar a {
+      color: #fff;
+      font-size: 2.3rem;
+    }
+
+    .navbar ul li a:hover {
+      color: var(--main-color);
+    }
+
+    .navbar-toggler {
+      background-color: white;
+      margin-right: 1rem;
+    }
+
+    .fa-university {
+      transition: all linear;
+      animation: rot 2s linear infinite;
+      color: var(--main-color);
+    }
+
+    @keyframes rot {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .ban {
+      color: var(--main-color);
+    }
+
+    .navbar-logo {
+      font-weight: bold;
+    }
+
+    .navbar .navbar-logo {
+      font-size: 3.5rem;
+      letter-spacing: 0.5rem;
+    }
+
+    /* ****************************************** */
+    #home::before {
+      background-color: #fff;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #home {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      padding: 0;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    /* ***************************************** */
+    .testimonials {
+      font-size: 18px;
+      padding: 40px 0;
+      color: #434343;
+      text-align: center;
+      height: 86vh;
+      display: flex;
+
+    }
+
+    .inner {
+
+      max-width: 1200px;
+      margin: auto;
+      overflow: hidden;
+      padding: 0 10px;
+    }
+
+    .border {
+      width: 160px;
+      height: 5px;
+      background: black;
+      margin: 10px auto;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .col {
+      flex: 33%;
+      max-width: 33.33%;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+
+    .testimonial img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    .name {
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 5px 0;
+    }
+
+    .stars {
+      color: rgb(255, 128, 0);
+      margin-bottom: 20px;
+    }
+
+    .heading {
+      font-weight: bold;
+      font-size: 3rem;
+      color: red;
+    }
+
+    .navbar-toggler {
+      font-size: 3px;
+    }
+
+    /* ****************************************************** */
+    @media screen and (max-width: 900px) {
+      .col {
+        flex: 100%;
+        max-width: 80%;
+      }
+
+    }
+
+    @media screen and (max-width: 600px) {
+      .col {
+        flex: 100%;
+        max-width: 100%;
+      }
+
+    }
+
+    /* ***************************************************************** */
+
+
+    @media (min-width: 0px) and (max-width:350px) {
+      .navbar .navbar-logo {
+        font-size: 1.5rem;
+        letter-spacing: normal;
+      }
+
+      .navbar a {
+        font-size: 1rem;
+      }
+
+    }
+
+    @media (min-width: 350px) and (max-width:650px) {
+      .navbar .navbar-logo {
+        font-size: 2.0rem;
+        letter-spacing: normal;
+      }
+
+      .navbar a {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (min-width: 650px) and (max-width:900px) {
+      .navbar .navbar-logo {
+        font-size: 2.5rem;
+        letter-spacing: normal;
+      }
+
+      .navbar a {
+        font-size: 2rem;
+      }
+    }
+
+    @media (min-width: 900px) and (max-width:1350px) {
+      .navbar .navbar-logo {
+        font-size: 3.5rem;
+        letter-spacing: normal;
+      }
+
+      .testimonial p {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="home">
+    <div id="home">
+      <header class="header">
+        <div class="main_menu">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand navbar-logo" href="#"><i class="fas fa-1x fa-university main-logo"></i> BASIC
+              <span class="ban"> BANKING </span> SYSTEM
+              <i class="fas fa-1x fa-university main-logo"></i>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="testimony">Testimony</a>
+                </li>
+
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <div class="testimonials">
+        <div class="inner">
+          <h1 class="heading">Testimonials</h1>
+          <div class="border"></div>
+          <div class="row">
+            <div class="col">
+              <div class="testimonial">
+                <img src="img/priyesh.jpg" alt="" />
+                <div class="name">Priyesh Kumar</div>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>
+                  Priyesh is a technology enthusiast at his core. He is known for architecting, designing and developing
+                  large scale applications, and ensure security, scalability, and maintainability.
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="testimonial">
+                <img src="img/tanwi_kaushik.jpg" alt="" />
+                <div class="name">Tanwi Kaushik</div>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>
+                  Tanwi is a social entrepreneur and researcher. She is a double masters in Life Sciences from Cornell
+                  University (USA) and NUS (Singapore) with 6 years of experience in research.
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="testimonial">
+                <img src="img/jasjit_singh.jpg" alt="" />
+                <div class="name">Jasjit Singh</div>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>
+                  Jasjit Singh has been an INSEAD professor since 2004. His interests include Strategy, Inclusive
+                  Business, Sustainable Development, Innovation, Impact Investing and Impact Evaluation. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

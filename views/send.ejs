@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BANKING</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 1500px)"
+      href="css/phone.css"
+    />
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,200;0,300;0,400;0,900;1,700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Piazzolla", serif;
+      }
+      :root {
+        --main-bg: #1e272e;
+        --main-color: #0097e6;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+      }
+      /* ************************************navbar styling************************ */
+      #home::before {
+        background-color: rgb(199, 199, 199);
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+      }
+
+      #home {
+        position: relative;
+        width: 100vw;
+         padding: 0;
+        margin: 0;
+        height: 100vh;
+        overflow-x: hidden;
+      }
+
+      .main_menu {
+        background-color: var(--main-bg);
+        z-index: 3;
+        position: sticky;
+      }
+      .navbar {
+        color: #fff;
+        background-color: var(--main-bg);
+        padding: 2rem 0;
+      }
+      .navbar li a {
+        margin: 0 2rem;
+        font-weight: bold;
+      }
+      .navbar a {
+        color: #fff;
+        font-size: 2.3rem;
+      }
+      .navbar ul li a:hover {
+        color: var(--main-color);
+      }
+      .navbar-toggler {
+        background-color: white;
+        margin-right: 1rem;
+      }
+      .fa-university {
+        transition: all linear;
+        animation: rot 2s linear infinite;
+        color: var(--main-color);
+      }
+      @keyframes rot {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .ban {
+        color: var(--main-color);
+      }
+      .navbar-logo {
+        font-weight: bold;
+      }
+      .navbar .navbar-logo {
+        font-size: 3.5rem;
+        letter-spacing: 0.5rem;
+      }
+      .btn {
+        border: none;
+        padding: 0.8rem 1.8rem;
+        font-size: 1.4rem;
+        border-radius: 2rem;
+        text-transform: uppercase;
+        box-shadow: 0.8px 6px 6px #000;
+        outline: none;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .btn a {
+        text-decoration: none;
+        color: #000;
+      }
+      .btn :hover {
+        color: var(--main-color);
+      }
+.login-page {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto;
+}
+.form {
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  background: rgb(51, 50, 50);
+  max-width: 460px;
+  max-height: 460px;
+  margin: 10% auto;
+  padding: 45px;
+  text-align: center;
+  transform: translateY(-150%);
+  animation: about-img-animation 1s ease-in-out forwards;
+}
+@keyframes about-img-animation {
+  100% {
+    transform: translateY(0);
+  }
+}
+.form input {
+  font-family: FontAwesome, "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 10px;
+}
+#paisa,
+#email,
+#acc,
+#ifsc {
+  display: block;
+  margin: 1em auto;
+  border-radius: 2px;
+  height: 3em;
+  width: 20em;
+  padding: 0px 5px;
+  background-color: white;
+  background-size: 25px 25px;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  outline: none;
+  border-radius: 20px;
+}
+input[type="submit"] {
+  border: none;
+  padding: 0.8rem 1.8rem;
+  font-size: 2rem;
+  border-radius: 2rem;
+
+  text-transform: capitalize;
+  box-shadow: 0.8px 6px 6px #000;
+  outline: none;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: white;
+}
+.btn a {
+  text-decoration: none;
+  color: #000;
+}
+input[type="submit"]:hover {
+  background-color: rgb(76, 230, 76);
+}
+input[type="submit"] {
+  margin-top: 1em;
+  height: 1.4em;
+  border: none;
+  padding: 0px;
+  text-align: center;
+  width: 25%;
+  cursor: pointer;
+}
+      /* ********************************************** */
+      .navbar-toggler {
+        font-size: 3px;
+      }
+      @media (min-width: 0px) and (max-width: 349px) {
+        .navbar .navbar-logo {
+          font-size: 1.5rem;
+          letter-spacing: normal;
+        }
+        .navbar a {
+          font-size: 1rem;
+        }
+        .form input{
+          font-size: 8px;
+        }
+       .form {
+         max-width: 300px;
+         max-height: 300px;
+       }
+       
+      }
+      @media (min-width: 350px) and (max-width: 425px) {
+        .navbar .navbar-logo {
+          font-size: 1.5rem;
+          letter-spacing: normal;
+        }
+        .navbar a {
+          font-size: 1rem;
+        }
+        .form input{
+          font-size: 13px;
+        }
+      }
+      @media (min-width: 425px) and (max-width: 800px) {
+        .navbar .navbar-logo {
+          font-size: 2.5rem;
+          letter-spacing: normal;
+        }
+        .navbar a {
+          font-size: 1.5rem;
+        }
+       
+      }
+      @media (min-width: 800px) and (max-width: 1000px) {
+        .navbar .navbar-logo {
+          font-size: 3rem;
+          letter-spacing: normal;
+        }
+        .navbar a {
+          font-size: 2.3rem;
+        }
+       
+      }
+
+
+</style>
+</head>
+<body>
+  <div id="home">
+  <header class="header">
+        <div class="main_menu">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand navbar-logo" href="#"
+              ><i class="fas fa-1x fa-university main-logo"></i> BASIC
+              <span class="ban"> BANKING </span> SYSTEM
+              <i class="fas fa-1x fa-university main-logo"></i>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="home"
+                    >Home <span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+  <div class="login-page">
+        <div class="form">
+            <form action="/send" method="POST">
+                <input id="email" type="text" value="<%=user.name%>" readonly name="name" />
+                <input id="acc" type="text" value="<%=user.accountNo%>" readonly name="accountNo" />
+                <input id="ifsc" type="text" value="<%=user.ifsc%>" readonly name="ifsc" />
+                <input id="paisa" type="number" placeholder="Amount" name="paisa" />
+                <input type="submit" name="submit" value="Pay" />
+            </form>
+            <script src='https://www.google.com/recaptcha/api.js'></script>
+            </form>
+        </div>
+    </div>
+  </div>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

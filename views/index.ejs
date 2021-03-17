@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BANKING</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 1500px)"
+      href="css/phone.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,200;0,300;0,400;0,900;1,700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Piazzolla", serif;
+      }
+
+      :root {
+        --main-bg: #1e272e;
+        --main-color: #0097e6;
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+
+      body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .main_menu {
+        background-color: var(--main-bg);
+        z-index: 3;
+        position: sticky;
+      }
+
+      .navbar {
+        color: #fff;
+        background-color: var(--main-bg);
+        padding: 2rem 0;
+      }
+
+      .navbar li a {
+        margin: 0 2rem;
+        font-weight: bold;
+      }
+
+      .navbar a {
+        color: #fff;
+        font-size: 2.3rem;
+      }
+
+      .navbar ul li a:hover {
+        color: var(--main-color);
+      }
+
+      .navbar-toggler {
+        background-color: white;
+        margin-right: 1rem;
+      }
+
+      .fa-university {
+        transition: all linear;
+        animation: rot 2s linear infinite;
+        color: var(--main-color);
+      }
+
+      @keyframes rot {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .ban {
+        color: var(--main-color);
+      }
+
+      .navbar-logo {
+        font-weight: bold;
+      }
+
+      .navbar .navbar-logo {
+        font-size: 3.5rem;
+        letter-spacing: 0.5rem;
+      }
+
+      #home::before {
+        background: url("img/pic12.jpg") no-repeat center center/cover;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      #home {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+      }
+
+      /* ************************main box styling************************************** */
+      .main-box {
+        text-align: center;
+        font-size: 4.5rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: white;
+        position: absolute;
+        z-index: 5;
+        width: 800px;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .btn {
+        border: none;
+        padding: 0.8rem 1.8rem;
+        font-size: 1.4rem;
+        border-radius: 2rem;
+        text-transform: uppercase;
+        box-shadow: 0.8px 6px 6px #000;
+        outline: none;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .btn a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      .btn :hover {
+        color: var(--main-color);
+      }
+
+      .navbar-toggler {
+        font-size: 3px;
+      }
+
+      /* ******************************footer styling************************************* */
+      .socialmedia {
+        font-size: 0.8rem;
+        text-align: center;
+        padding-top: 1rem;
+        color: black;
+        background-color: rgb(219, 216, 216);
+        margin-bottom: -10px;
+      }
+
+      .social-icons i {
+        margin: 0rem 1rem;
+        transition: all;
+        color: black;
+      }
+
+      .social-icons i:hover {
+        transform: translateY(-1rem);
+      }
+
+      /* *********************************************************** */
+      @media (min-width: 0px) and (max-width: 350px) {
+        .navbar .navbar-logo {
+          font-size: 1.5rem;
+          letter-spacing: normal;
+        }
+
+        .navbar a {
+          font-size: 1rem;
+        }
+
+        .main-box {
+          font-size: 1.3rem;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        .btn {
+          font-size: 0.7rem;
+        }
+
+        .upperheading {
+          font-size: 2rem;
+        }
+      }
+
+      @media (min-width: 350px) and (max-width: 425px) {
+        .navbar .navbar-logo {
+          font-size: 1.5rem;
+          letter-spacing: normal;
+        }
+
+        .navbar a {
+          font-size: 1rem;
+        }
+
+        .main-box {
+          font-size: 1.5rem;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        .btn {
+          font-size: 0.9rem;
+        }
+
+        .upperheading {
+          font-size: 2.2rem;
+        }
+      }
+
+      @media (min-width: 425px) and (max-width: 800px) {
+        .navbar .navbar-logo {
+          font-size: 2.5rem;
+          letter-spacing: normal;
+        }
+
+        .navbar a {
+          font-size: 1.5rem;
+        }
+
+        .main-box {
+          font-size: 2.5rem;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        .btn {
+          font-size: 1.1rem;
+        }
+
+        .upperheading {
+          font-size: 3rem;
+        }
+      }
+
+      @media (min-width: 800px) and (max-width: 1200px) {
+        .navbar .navbar-logo {
+          font-size: 3rem;
+          letter-spacing: normal;
+        }
+
+        .navbar a {
+          font-size: 2rem;
+        }
+
+        .main-box {
+          font-size: 3.5rem;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        .btn {
+          font-size: 1.3rem;
+        }
+
+        .upperheading {
+          font-size: 4rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="home">
+      <header class="header">
+        <div class="main_menu">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand navbar-logo" href="#"
+              ><i class="fas fa-1x fa-university main-logo"></i> BASIC
+              <span class="ban"> BANKING </span> SYSTEM
+              <i class="fas fa-1x fa-university main-logo"></i>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/"
+                    >Home <span class="sr-only">(current)</span></a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="testimony">Testimony</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <div class="main-box container">
+        <h1 class="upperheading">easy,simple and secure</h1>
+        <p class="main-heading">online money transection</p>
+        <div class="btn-main">
+          <button class="btn login"><a href="login">login</a></button>
+          <button class="btn signup"><a href="register">sign up</a></button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="socialmedia">
+        <div class="social-icons">
+          <a
+            href="https://www.thesparksfoundationsingapore.org/about/vision-mission-and-values/"
+            target="_blank"
+            ><i class="fab fa-facebook fa-2x"></i
+          ></a>
+          <a
+            href="https://www.thesparksfoundationsingapore.org/about/vision-mission-and-values/"
+            target="_blank"
+            ><i class="fab fa-instagram fa-2x"></i
+          ></a>
+          <a
+            href="https://www.thesparksfoundationsingapore.org/about/vision-mission-and-values/"
+            target="_blank"
+            ><i class="fab fa-twitter-square fa-2x"></i
+          ></a>
+          <a
+            href="https://www.thesparksfoundationsingapore.org/about/vision-mission-and-values/"
+            target="_blank"
+            ><i class="fab fa-youtube fa-2x"></i
+          ></a>
+        </div>
+        <p>banking service transection &copy; 2020 ,All rights are reserved</p>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

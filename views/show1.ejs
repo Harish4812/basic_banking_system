@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BANKING</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 1500px)"
+      href="css/phone.css"
+    />
+    <style>
+    @import url("https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,200;0,300;0,400;0,900;1,700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Piazzolla", serif;
+      }
+      :root {
+        --main-bg: #1e272e;
+        --main-color: #0097e6;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+      }
+      /* ************************************navbar styling************************ */
+      .main_menu {
+        background-color: var(--main-bg);
+        z-index: 3;
+        position: sticky;
+      }
+      .navbar {
+        color: #fff;
+        background-color: var(--main-bg);
+        padding: 2rem 0;
+      }
+      .navbar li a {
+        margin: 0 2rem;
+        font-weight: bold;
+      }
+      .navbar a {
+        color: #fff;
+        font-size: 2.3rem;
+      }
+      .navbar ul li a:hover {
+        color: var(--main-color);
+      }
+      .navbar-toggler {
+        background-color: white;
+        margin-right: 1rem;
+      }
+      .fa-university {
+        transition: all linear;
+        animation: rot 2s linear infinite;
+        color: var(--main-color);
+      }
+      @keyframes rot {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .ban {
+        color: var(--main-color);
+      }
+      .navbar-logo {
+        font-weight: bold;
+      }
+      .navbar .navbar-logo {
+        font-size: 3.5rem;
+        letter-spacing: 0.5rem;
+      }
+
+      /* ****************************************** */
+
+      .main {
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .left {
+        transform: translateX(-150%);
+        animation: about-img-animation 1s ease-in-out forwards;
+      }
+      @keyframes about-img-animation {
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      .right {
+        text-align: center;
+        width: 600px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transform: translateX(150%);
+        animation: about-im-animation 1s ease-in-out forwards;
+      }
+      @keyframes about-im-animation {
+        100% {
+          transform: translateX(0);
+        }
+      }
+      .left img {
+        width: 300px;
+        height: 300px;
+      }
+      .right .set {
+        font-size: 3rem;
+        font-weight: bold;
+        color:red;
+      }
+      .deco {
+        color: rgb(56, 56, 207);
+        font-size: 3rem;
+      }
+      .btn {
+        border: none;
+        padding: 0.8rem 1.8rem;
+        font-size: 2rem;
+        border-radius: 2rem;
+        text-transform: uppercase;
+        box-shadow: 0.8px 6px 6px #000;
+        outline: none;
+        text-decoration: none;
+        font-weight: bold;
+        display: block;
+        margin: 0 auto;
+        margin-top: 2rem;
+    
+        
+      }
+      .btn span {
+        color: #000;
+      }
+      .btn span:hover {
+        color: #0097e6;
+      }
+      .hii a{
+        text-decoration: none;
+      }
+      #home::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #home {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+        overflow-x: hidden;
+      }
+       /* ********************************************** */
+      .navbar-toggler {
+        font-size: 3px;
+      }
+      @media (min-width: 0px) and (max-width: 350px) {
+        .navbar .navbar-logo {
+          font-size: 1.5rem;
+          letter-spacing: normal;
+        }
+        .navbar a {
+          font-size: 1rem;
+        }
+         .hii{
+          font-size: 1.5rem;
+        }
+        .deco{
+          font-size: 1.5rem;
+        }
+      }
+      @media (min-width: 350px) and (max-width: 425px) {
+        .navbar .navbar-logo {
+          font-size: 1.5rem;
+          letter-spacing: normal;
+        }
+        .navbar a {
+          font-size: 1rem;
+        }
+         .hii{
+          font-size: 1.8rem;
+        }
+        .deco{
+          font-size: 1.8rem;
+        }
+      }
+      @media (min-width: 425px) and (max-width: 800px) {
+        .navbar .navbar-logo {
+          font-size: 2.5rem;
+          letter-spacing: normal;
+        }
+        .navbar a {
+          font-size: 1.5rem;
+        }
+         .hii{
+          font-size: 2rem;
+        }
+        .deco{
+          font-size: 2rem;
+        }
+      }
+      @media (min-width: 800px) and (max-width: 1000px) {
+        .navbar .navbar-logo {
+          font-size: 3rem;
+          letter-spacing: normal;
+        }
+        .navbar a {
+          font-size: 2.3rem;
+        }
+         .hii{
+          font-size: 2.3rem;
+        }
+        .deco{
+          font-size: 2.3rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="home">
+      <div id="home">
+      <header class="header">
+        <div class="main_menu">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand navbar-logo" href="#"
+              ><i class="fas fa-1x fa-university main-logo"></i> BASIC
+              <span class="ban"> BANKING </span> SYSTEM
+              <i class="fas fa-1x fa-university main-logo"></i>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="home"
+                    >Home <span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Logout</a>
+                </li>
+               
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <div class="main">
+        <div class="right">
+          <div class="set">
+            <span class="hii">Name</span>
+            <span class="deco">: <%=user.name%> </span>
+          </div>
+          <div class="set">
+            <span class="hii">Username</span>
+            <span class="deco">: <%=user.username%> </span>
+          </div>
+          <div class="set">
+            <span class="hii">Account no.</span>
+            <span class="deco">: <%=user.accountNo%> </span>
+          </div>
+          <div class="set">
+            <span class="hii">IFSC</span>
+            <span class="deco">:<%=user.ifsc%> </span>
+          </div>
+          <div class="hii">
+           <a  href="/customer/<%= user._id%>/pay"
+            ><button class="button btn">
+              <span>Pay</span>
+            </button></a
+          >
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

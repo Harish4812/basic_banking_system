@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BANKING</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 1500px)"
+      href="css/phone.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,200;0,300;0,400;0,900;1,700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Piazzolla", serif;
+      }
+      :root {
+        --main-bg: #1e272e;
+        --main-color: #0097e6;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+      }
+      .main_menu {
+        background-color: var(--main-bg);
+        z-index: 3;
+        position: sticky;
+      }
+      .navbar {
+        color: #fff;
+        background-color: var(--main-bg);
+        padding: 2rem 0;
+      }
+      .navbar li a {
+        margin: 0 2rem;
+        font-weight: bold;
+      }
+      .navbar a {
+        color: #fff;
+        font-size: 2.3rem;
+      }
+      .navbar ul li a:hover {
+        color: var(--main-color);
+      }
+      .navbar-toggler {
+        background-color: white;
+        margin-right: 1rem;
+      }
+      .fa-university {
+        transition: all linear;
+        animation: rot 2s linear infinite;
+        color: var(--main-color);
+      }
+      @keyframes rot {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .ban {
+        color: var(--main-color);
+      }
+      .navbar-logo {
+        font-weight: bold;
+      }
+      .navbar .navbar-logo {
+        font-size: 3.5rem;
+        letter-spacing: 0.5rem;
+      }
+      #home::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #home {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+      }
+
+      /* ************************main box styling************************************** */
+      .main-box {
+        text-align: center;
+        font-size: 4.5rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: white;
+        position: absolute;
+        z-index: 5;
+        width: 800px;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .btn {
+        border: none;
+        padding: 0.8rem 1.8rem;
+        font-size: 1.4rem;
+        border-radius: 2rem;
+        text-transform: uppercase;
+        box-shadow: 0.8px 6px 6px #000;
+        outline: none;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .btn a {
+        text-decoration: none;
+        color: #000;
+      }
+      .btn :hover {
+        color: var(--main-color);
+      }
+      .navbar-toggler {
+        font-size: 3px;
+      }
+
+      /* *********************************************************** */
+      .container {
+        position: absolute;
+        max-width: 800px;
+        height: 400px;
+        margin: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .myrightctn {
+        position: relative;
+        border-radius: 25px;
+        height: 100%;
+        padding: 25px;
+        color: blue;
+        font-family: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .myleftctn {
+        border: 1px solid white;
+        position: relative;
+        margin-top: 3rem;
+        height: 85%;
+        width: auto;
+        padding: 25px;
+        font-size: 2rem;
+        padding-left: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .form input,
+      .signupcss {
+        font-family: FontAwesome, "Roboto", sans-serif;
+        outline: 0;
+        background: #f2f2f2;
+        width: 100%;
+        border: 0;
+        margin: 0 0 15px;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 24px;
+        border-radius: 10px;
+        color: black;
+      }
+      input[type="submit"] {
+        text-align: center;
+        padding: 0;
+        height: 3em;
+      }
+      input {
+        box-shadow: 0.8px 6px 6px #000;
+      }
+
+      input[type="submit"] {
+        margin: 4px 2px;
+        height: 1.5em;
+        border: none;
+        text-align: center;
+        width: 100%;
+        cursor: pointer;
+        font-family: "Montserrat", sans-serif;
+        font-size: 25px;
+        font-weight: semibold;
+        border-radius: 5px;
+        box-shadow: 0.8px 6px 6px #000;
+        color: black;
+      }
+      input[type="submit"]:hover,
+      .signupcss:hover {
+        color: black;
+        background-color: #0097e6;
+      }
+      input[type="submit"]:active {
+        color: #79e3b6;
+      }
+      .signupcss:hover,
+      input:hover {
+        transform: scaleX(1.1);
+      }
+      .row {
+        height: 100%;
+      }
+      .mycard {
+        position: relative;
+        height: 100%;
+        border-radius: 25px;
+      }
+      .myleftctn input,
+      .btn {
+        width: 230px;
+        background: white;
+        border: 1px solid black;
+        border-radius: 25px;
+        padding: 0.3rem;
+        border: none;
+        font-size: 2rem;
+      }
+      .myleftctn input:focus {
+        outline: none;
+      }
+      .myform {
+        position: relative;
+      }
+      .myleftctn .butt {
+        background: #a7a7a7;
+        color: black;
+        width: 230px;
+        border: none;
+        margin-left: 0.5rem;
+        border-radius: 25px;
+        padding: 2px;
+      }
+      .myleftctn .butt:focus {
+        outline: none;
+      }
+      .myleftctn .butt:hover {
+        background-color: rgb(59, 59, 228);
+      }
+      .myleftctn .fas {
+        position: relative;
+        color: black;
+        left: 36px;
+      }
+      .hii {
+        font-size: 10px;
+        border: 1px solid saddlebrown;
+        width: 230px;
+        margin-left: 4rem;
+      }
+      .btn {
+        text-transform: capitalize;
+      }
+      .input[type="submit"] {
+        font-weight: bold;
+      }
+      .myrightctn img {
+        padding: 2rem;
+        width: 450px;
+        height: 300px;
+      }
+      .myleftctn {
+        transform: translateX(-150%);
+        animation: about-img-animation 1s ease-in-out forwards;
+      }
+      @keyframes about-img-animation {
+        100% {
+          transform: translateX(0);
+        }
+      }
+      .myrightctn {
+        transform: translateX(150%);
+        animation: about-img-animation 1s ease-in-out forwards;
+      }
+      @keyframes about-img-animation {
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      .navbar-toggler {
+        font-size: 3px;
+      }
+      /* ********************************************** */
+      @media (min-width: 0px) and (max-width: 350px) {
+        .navbar .navbar-logo {
+          font-size: 1.5rem;
+          letter-spacing: normal;
+        }
+        .navbar a {
+          font-size: 1rem;
+        }
+      }
+      @media (min-width: 350px) and (max-width: 425px) {
+        .navbar .navbar-logo {
+          font-size: 1.5rem;
+          letter-spacing: normal;
+        }
+        .navbar a {
+          font-size: 1rem;
+        }
+      }
+      @media (min-width: 425px) and (max-width: 800px) {
+        .navbar .navbar-logo {
+          font-size: 2.5rem;
+          letter-spacing: normal;
+        }
+        .navbar a {
+          font-size: 1.5rem;
+        }
+      }
+      @media (min-width: 800px) and (max-width: 1000px) {
+        .navbar .navbar-logo {
+          font-size: 3rem;
+          letter-spacing: normal;
+        }
+        .navbar a {
+          font-size: 2.3rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="home">
+      <header class="header">
+        <div class="main_menu">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand navbar-logo" href="#"
+              ><i class="fas fa-1x fa-university main-logo"></i> BASIC
+              <span class="ban"> BANKING </span> SYSTEM
+              <i class="fas fa-1x fa-university main-logo"></i>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/"
+                    >Home <span class="sr-only">(current)</span></a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="testimony">Testimony</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="mycard">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="myleftctn">
+                <form
+                  action="/register"
+                  method="POST"
+                  class="myform text-centre"
+                >
+                  <div class="form-group">
+                    <input
+                      id="umail"
+                      type="text"
+                      placeholder="Enter Your Name"
+                      autocomplete="off"
+                      minlength="4"
+                      maxlength="15"
+                      name="name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      id="umail1"
+                      type="text"
+                      placeholder="Enter your .com Email"
+                      autocomplete="off"
+                      name="username"
+                      pattern=".+@gmail.com"
+                      unique
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      id="umail2"
+                      placeholder="Enter Your Account Number"
+                      autocomplete="off"
+                      name="accountNo"
+                      type="number"
+                      required
+                      unique
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      id="umail4"
+                      type="text"
+                      placeholder="Enter Your IFSC"
+                      autocomplete="off"
+                      name="ifsc"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      id="umail3"
+                      type="number"
+                      placeholder="Enter Your Balance"
+                      autocomplete="off"
+                      name="balance"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      placeholder="Password [A-Z,a-z,0-9]"
+                      autocomplete="off"
+                      id="psw"
+                      name="password"
+                      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{3,}"
+                      unique
+                    />
+                  </div>
+                  <div class="button">
+                    <input type="submit" value="Sign Up" />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="myrightctn">
+                <div class="box">
+                  <img src="./img/l15.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BANKING</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 1500px)"
+      href="css/phone.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,200;0,300;0,400;0,900;1,700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Piazzolla", serif;
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+
+      .box {
+        position: absolute;
+        z-index: 7;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .box1,
+      .box2,
+      .box4,
+      .box5 {
+        margin: 1rem;
+      }
+
+      .box1 img,
+      .box2 img,
+      .box4 img,
+      .box5 img {
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+        height: 190px;
+        padding: 1rem;
+      }
+
+      .btn {
+        border: none;
+        padding: 0.8rem 1.8rem;
+        font-size: 1.4rem;
+        border-radius: 2rem;
+        text-transform: capitalize;
+        box-shadow: 0.8px 6px 6px #000;
+        outline: none;
+        text-decoration: none;
+        font-weight: bold;
+        background-color: rgb(203, 182, 221);
+      }
+
+      .btn a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      .btn :hover {
+        color: #0097e6;
+      }
+
+      .mainbtn {
+        text-align: center;
+      }
+
+      .box3 .btn {
+        font-size: 3rem;
+      }
+
+      .box1 img,
+      .box4 img {
+        transform: translateX(-150%);
+        animation: about-img-animation 1s ease-in-out forwards;
+      }
+
+      @keyframes about-img-animation {
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      .box2 img,
+      .box5 img {
+        transform: translateX(150%);
+        animation: about-img-animation 1s ease-in-out forwards;
+      }
+
+      @keyframes about-img-animation {
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      /* *************************** */
+      .main_menu {
+        background-color: var(--main-bg);
+        z-index: 3;
+      }
+      #home::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+      }
+
+      #home {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+        overflow-x: hidden;
+      }
+      .navbar {
+        color: #fff;
+        background-color: var(--main-bg);
+        padding: 2rem 0;
+      }
+
+      .navbar li a {
+        margin: 0 2rem;
+        font-weight: bold;
+      }
+
+      .navbar a {
+        color: #fff;
+        font-size: 2.3rem;
+      }
+
+      .navbar ul li a:hover {
+        color: var(--main-color);
+      }
+
+      .navbar-toggler {
+        background-color: white;
+        margin-right: 1rem;
+      }
+
+      .fa-university {
+        transition: all linear;
+        animation: rot 2s linear infinite;
+        color: var(--main-color);
+      }
+
+      @keyframes rot {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .ban {
+        color: var(--main-color);
+      }
+
+      .navbar-logo {
+        font-weight: bold;
+      }
+
+      .navbar .navbar-logo {
+        font-size: 3.5rem;
+        letter-spacing: 0.5rem;
+      }
+
+      :root {
+        --main-bg: #1e272e;
+        --main-color: #0097e6;
+      }
+      /* ********************************************** */
+      .navbar-toggler {
+        font-size: 3px;
+      }
+      @media (min-width: 0px) and (max-width: 350px) {
+        .navbar .navbar-logo {
+          font-size: 1.5rem;
+          letter-spacing: normal;
+        }
+        .navbar a {
+          font-size: 1rem;
+        }
+        .box {
+          top: 97%;
+          left: 50%;
+        }
+      }
+      @media (min-width: 350px) and (max-width: 430px) {
+        .navbar .navbar-logo {
+          font-size: 1.5rem;
+          letter-spacing: normal;
+        }
+        .navbar a {
+          font-size: 1rem;
+        }
+        .box {
+          top: 85%;
+          left: 50%;
+        }
+      }
+      @media (min-width: 430px) and (max-width: 516px) {
+        .navbar .navbar-logo {
+          font-size: 2.5rem;
+          letter-spacing: normal;
+        }
+        .navbar a {
+          font-size: 1.5rem;
+        }
+        .box {
+          top: 85%;
+          left: 50%;
+        }
+      }
+      @media (min-width: 525px) and (max-width: 800px) {
+        .navbar .navbar-logo {
+          font-size: 2.5rem;
+          letter-spacing: normal;
+        }
+        .navbar a {
+          font-size: 1.5rem;
+        }
+      }
+      @media (min-width: 800px) and (max-width: 1000px) {
+        .navbar .navbar-logo {
+          font-size: 3rem;
+          letter-spacing: normal;
+        }
+        .navbar a {
+          font-size: 2.3rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="home">
+      <header class="header">
+        <div class="main_menu">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand navbar-logo" href="#"
+              ><i class="fas fa-1x fa-university main-logo"></i> BASIC
+              <span class="ban"> BANKING </span> SYSTEM
+              <i class="fas fa-1x fa-university main-logo"></i>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="home"
+                    >Home <span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <div class="outer" id="about">
+        <div class="container box">
+          <div class="row">
+            <div class="col upper-box box1">
+              <img src="img/create user.png" alt="" />
+              <div class="mainbtn">
+                <button class="btn">
+                  <a href="signup">create Another user</a>
+                </button>
+              </div>
+            </div>
+            <div class="col upper-box box2">
+              <img src="img/transection.png" alt="" />
+              <div class="mainbtn">
+                <button class="btn"><a href="customers">customers</a></button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col"></div>
+            <div class="col middle-box box3">
+              <div class="mainbtn"></div>
+            </div>
+            <div class="col"></div>
+          </div>
+          <div class="row">
+            <div class="col last-box box4">
+              <img src="img/profile....jpeg" alt="" />
+              <div class="mainbtn">
+                <button class="btn">
+                  <a href="/profile/<%= user._id%>">profile</a>
+                </button>
+              </div>
+            </div>
+            <div class="col last-box box5">
+              <img src="img/history.jpg" alt="history" />
+              <div class="mainbtn">
+                <button class="btn">
+                  <a href="/history/<%= user._id%>"> transection history</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

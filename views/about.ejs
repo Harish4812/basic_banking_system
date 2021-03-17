@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BANKING</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 1500px)"
+      href="css/phone.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,200;0,300;0,400;0,900;1,700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Piazzolla", serif;
+      }
+      :root {
+        --main-bg: #1e272e;
+        --main-color: #0097e6;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-image: linear-gradient(
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.4)
+        ),
+        url("img/pic12.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        background-attachment: fixed;
+      }
+      /* ************************************navbar styling************************ */
+      .main_menu {
+        background-color: var(--main-bg);
+        z-index: 3;
+      }
+      .navbar {
+        color: #fff;
+        background-color: var(--main-bg);
+        padding: 2rem 0;
+        position: sticky;
+      }
+      .navbar li a {
+        margin: 0 2rem;
+        font-weight: bold;
+      }
+      .navbar a {
+        color: #fff;
+        font-size: 2.3rem;
+      }
+      .navbar ul li a:hover {
+        color: var(--main-color);
+      }
+      .navbar-toggler {
+        background-color: white;
+        margin-right: 1rem;
+      }
+      .fa-university {
+        transition: all linear;
+        animation: rot 2s linear infinite;
+        color: var(--main-color);
+      }
+      @keyframes rot {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .ban {
+        color: var(--main-color);
+      }
+      .navbar-logo {
+        font-weight: bold;
+      }
+      .navbar .navbar-logo {
+        font-size: 3.5rem;
+        letter-spacing: 0.5rem;
+      }
+      /* ******************************footer styling************************************* */
+      .socialmedia {
+        font-size: 2rem;
+        text-align: center;
+        padding-top: 1.5rem;
+        color: black;
+        background-color: rgb(219, 216, 216);
+      }
+      .social-icons i {
+        margin: 0rem 1.5rem;
+        transition: all;
+        color: black;
+      }
+      .social-icons i:hover {
+        transform: translateY(-1rem);
+      }
+      /* ***********************************about styling******************* */
+    .outer{    
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    font-family: 'Benne', serif;
+    margin-top: 50px ;
+    padding-bottom: 40px;
+    opacity: 0.9;
+    z-index: 1;
+    font-size: 2.5rem;
+   }
+
+  .box {
+    border: 1px solid white;
+    color: white;
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+    z-index: 1;
+  }
+  .navbar-toggler{
+    font-size:3px;
+  }
+      /* **************media query************************/
+      @media (min-width: 0px) and (max-width: 350px) {
+        .navbar .navbar-logo {
+          font-size: 1.5rem;
+          letter-spacing: normal;
+        }
+        .navbar a {
+          font-size: 1rem;
+        }
+        .row2 {
+          display: none;
+        }
+        .outer{
+          font-size: 1.3rem;
+        }
+      }
+      @media (min-width: 350px) and (max-width: 425px) {
+        .navbar .navbar-logo {
+          font-size: 1.5rem;
+          letter-spacing: normal;
+        }
+        .navbar a {
+          font-size: 1rem;
+        }
+        .row2 {
+          display: none;
+        }
+        .outer{
+          font-size: 1.8rem;
+        }
+      }
+      @media (min-width: 425px) and (max-width: 800px) {
+        .navbar .navbar-logo {
+          font-size: 2.5rem;
+          letter-spacing: normal;
+        }
+        .navbar a {
+          font-size: 1.5rem;
+        }
+        .row2 {
+          display: none;
+        }
+        .outer{
+          font-size: 2.1rem;
+        }
+      }
+      @media (min-width: 800px) and (max-width: 1000px) {
+        .navbar .navbar-logo {
+          font-size: 3rem;
+          letter-spacing: normal;
+        }
+        .navbar a {
+          font-size: 2.3rem;
+        }
+        .row2 {
+          display: none;
+        }
+        .outer{
+          font-size: 2rem;
+        }
+      }
+      
+    </style>
+  </head>
+
+  <body>
+    <div id="home">
+      <header class="header">
+        <div class="main_menu">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand navbar-logo" href="#"
+              ><i class="fas fa-1x fa-university main-logo"></i> BASIC
+              <span class="ban"> BANKING </span> SYSTEM
+              <i class="fas fa-1x fa-university main-logo"></i>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/"
+                    >Home <span class="sr-only">(current)</span></a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="testimony">Testimony</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+     <div class="outer">
+      <div class="box">
+        <h1 class="upperheading">BASIC BANKING SYSTEM</h1>
+        <hr style="color: white; width: 40%; height: 2px" />
+        <p>
+         To inspire, motivate and encourage students to learn, create and
+                help build a better society.To teach new ways of thinking, to
+                innovate and solve the problems on their own. To let the
+                students integrate, and help each other, learn from each other
+                and do well together. We aim to collaborate, and help students through our programmes
+                to inspire and integrate them, using innovative ways. We treat
+                all with respect, dignity and honesty. We show respect by
+                listening to and seeking to understand different points of
+                views, being sensitive to cultural and religious diversity.Our Vision Statement A world of enabled and connected little
+                minds, building future. Our Mission Statement To inspire
+                students, help them innovate and let them integrate to build the
+                next generation humankind.We treat all with respect, dignity and honesty. We show respect
+                by listening to and seeking to understand different points of
+                views, being sensitive to cultural and religious diversity, and
+                by working collaboratively with others to achieve common goals
+                and a harmonious work culture.
+        </p>
+      </div>
+    </div>
+
+    
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
